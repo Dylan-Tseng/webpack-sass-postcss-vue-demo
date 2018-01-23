@@ -1,0 +1,92 @@
+@import "variables";
+@import "mobile-adjust";
+@import "mixin/font-generate";
+@import "mixin/utilities";
+@import "mixin/padding-margin-generate";
+
+*{                                 //all tag box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+text position
+ */
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+.text-left{text-align: left;}
+.v-middle{vertical-align: middle;}
+.v-top{vertical-align: top;}
+.nowrap{white-space: nowrap;}
+/*
+  float
+ */
+.pull-right{float: right;}
+.pull-left{float: left;}
+
+/*
+img circle
+ */
+.img-circle{border-radius: 50%;}
+
+/*
+icon
+*/
+%icon{
+  background: url($icon-path) no-repeat;
+  display: inline-block;
+  @extend .v-middle;
+  //background-size: 3.6rem auto;
+  font-size: 0;
+  -webkit-text-size-adjust:none;
+}
+/*
+clearfix
+*/
+.clearfix {
+  &::after{
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+/*
+scrollbar
+*/
+.overflow-auto{overflow: auto;}
+.no-scrollbar{
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+/*
+flex
+*/
+.flex{display: flex;}
+.flex-inline{display: inline-flex;}
+.flex-v{@extend .flex;flex-direction:column;}
+.flex-1{flex: 1;}
+.flex-align-center{align-items: center;}   /*居中对齐*/
+.flex-pack-start{justify-content:flex-start;} /*左对齐*/
+.flex-pack-between{justify-content: space-between;}/*两端对齐*/
+.flex-pack-end{justify-content: flex-end;}   /*右对齐*/
+.flex-nowrap{flex-wrap: nowrap;}
+.flex-align-content-center{align-content:center;} /*在容器内, 额外的空白部分的分布*/
+.h100{height: 100%;}
+/*
+document reset
+*/
+body{
+  padding: 0;
+  @extend .f14;
+}
+
+
+
+
+
+

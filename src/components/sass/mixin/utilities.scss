@@ -1,0 +1,41 @@
+@import "../variables";
+/*
+单行省略
+*/
+%_overflow{
+  overflow : hidden;
+  text-overflow: ellipsis;
+}
+%_ellipsis{
+  @extend %_overflow;
+  white-space: nowrap;
+  display: inline-block;
+}
+@mixin ellipsis($width:100%){
+  @extend %_ellipsis;
+  width: $width;
+}
+/*
+多行省略
+*/
+%_multiClampEllipsis{
+  @extend %_overflow;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+@mixin multiClampEllipsis($width:100%,$lines:1){
+  @extend %_multiClampEllipsis;
+  -webkit-line-clamp: $lines;
+  width: $width;
+}
+/*
+px to rem
+*/
+@mixin px2rem($name,$px){
+  #{$name}:$px/100*1rem;
+}
+@mixin rem2px($name,$rem){
+  #{$name}:$rem*100*1px;
+}
+
+

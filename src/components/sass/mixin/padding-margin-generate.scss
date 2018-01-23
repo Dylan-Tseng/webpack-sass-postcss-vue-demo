@@ -1,0 +1,36 @@
+@import "../variables";
+//generate padding margin 10- 30
+@each $val in $padding-margin{
+  $unit:if($unit-mode == px,1,100);
+  $value:$val/$unit + $unit-mode;
+  .mgl#{$val}{
+    margin-left:$value;
+  }
+  .mgr#{$val}{
+    margin-right: $value;
+  }
+  .mgt#{$val}{
+    margin-top: $value;
+  }
+  .mgb#{$val}{
+    margin-bottom: $value;
+  }
+  .mg#{$val}{
+    margin: $value;
+  }
+  .pdl#{$val}{
+    padding-left: $value;
+  }
+  .pdr#{$val}{
+    padding-right: $value;
+  }
+  .pdt#{$val}{
+    padding-top: $value;
+  }
+  .pdb#{$val}{
+    padding-bottom: $value;
+  }
+  .pd#{$val}{
+    padding: $value;
+  }
+}

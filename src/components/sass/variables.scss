@@ -1,0 +1,11 @@
+$font-size-base:          36px; //视觉稿设计除以200
+$font-family-serif:       "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+$unit-mode:rem;           //rem px or rem;
+$padding-margin:2 4 5 8 10 12 15;
+$icon-path: 'https://www.baidu.com/img/baidu_jgylogo3.gif';
+
+/*
+mobile max-width,min-width
+*/
+$mobile-adjust-max-width: 540px;
+$mobile-adjust-min-width: 320px;

@@ -1,0 +1,10 @@
+//generate fontsize 10- 30
+@import "../variables";
+@for $fontSize from 10 through 30{
+  $unit:if($unit-mode == px,1,100);
+  @if $fontSize%2 == 0{
+    .f#{$fontSize}{
+      font-size: $fontSize/$unit + $unit-mode;
+    }
+  }
+}

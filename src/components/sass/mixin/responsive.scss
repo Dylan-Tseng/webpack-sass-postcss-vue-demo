@@ -1,0 +1,13 @@
+@import "../variables";
+/*
+float 布局
+*/
+%_left{
+  float: left;
+}
+@for $i from 1 through 12{
+  .col-#{$i}{
+    @extend %_left;
+    width: unquote(100*$i/12+'%');
+  }
+}

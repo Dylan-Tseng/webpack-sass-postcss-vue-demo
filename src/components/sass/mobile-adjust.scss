@@ -1,0 +1,17 @@
+@import "variables";
+@import "mixin/responsive";
+html{
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-size: calc(100vw/3.6);//视觉稿除以200
+}
+body{
+  max-width: $mobile-adjust-max-width;
+  min-width: $mobile-adjust-min-width;
+  margin: 0 auto;
+  height: inherit;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+@media screen and (max-width: $mobile-adjust-min-width){  html{font-size:64px;}}
+@media screen and (min-width: $mobile-adjust-max-width) {  html{font-size:148px;}}
